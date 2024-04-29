@@ -2,6 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 import torchvision.datasets as dset
 import torchvision.transforms as trn
 from PIL import Image
@@ -40,7 +41,8 @@ def build_dataset(dataset_name, transform=None, mode='train'):
     return dataset
 
 
-base_path = ".cache/data/"
+# base_path = ".cache/data/"
+base_path = "./dataset/"
 
 
 def build_reg_data(data_name="community"):
@@ -74,10 +76,32 @@ def build_reg_data(data_name="community"):
 
         y = y_wo_noise + eplison
 
+    elif data_name == "temperature":
+        # yosemite_temps.csv
+        data = pd.read_csv(base_path + 'yosemite_temps.csv')
+        data['ds'] = pd.to_datetime(data['ds'])
+        # Feature Engineering
+        features = ['year', 'month', 'day', 'hour', 'dayofweek']
+        data['year'] = data['ds'].dt.year
+        data['month'] = data['ds'].dt.month
+        data['day'] = data['ds'].dt.day
+        data['hour'] = data['ds'].dt.hour
+        data['dayofweek'] = data['ds'].dt.dayofweek
+
+        # Standardize features
+        scaler = StandardScaler()
+        data[features] = scaler.fit_transform(data[features])
+
+        # X = data['ds'].astype(np.int64) // 10 ** 9 # convert to unix timestamp
+        X = data[features].values
+        y = data['y'].values
+
     X = X.astype(np.float32)
     y = y.astype(np.float32)
 
     return X, y
+    
+
 
 
 
