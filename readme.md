@@ -21,3 +21,5 @@ mimic iii demo (1.4) benchmark - [source code for creating benchmark dataset](ht
     
 Practice Fusion Kaggle 2012 Dataset - [source](https://github.com/yasminlucero/Kaggle/tree/master)
 
+
+Sample notebook on creating resource allocation focused timeseries dataset from MIMIC III - [source](./test.ipynb)
