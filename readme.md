@@ -23,3 +23,10 @@ Practice Fusion Kaggle 2012 Dataset - [source](https://github.com/yasminlucero/K
 
 
 Sample notebook on creating resource allocation focused timeseries dataset from MIMIC III - [source](./test.ipynb)
+
+
+## Time Series Forecasting
+multivariate - [source](https://github.com/fas38/conformal-prediction/blob/main/ts_multi_var.ipynb)
+
+## Binary Classification
+binary classification - [source](https://github.com/fas38/conformal-prediction/blob/main/binary_clf.ipynb)
