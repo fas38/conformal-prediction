@@ -44,4 +44,4 @@ multivariate - [source](https://github.com/fas38/conformal-prediction/blob/main/
 ## Binary Classification
 binary classification - [source](https://github.com/fas38/conformal-prediction/blob/main/binary_clf.ipynb)
 
-
+[slide](./documents/Binary%20Classification%20for%20Tabular%20Data.pptx)
