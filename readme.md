@@ -42,6 +42,6 @@ Sample notebook on creating resource allocation focused timeseries dataset from 
 multivariate - [source](https://github.com/fas38/conformal-prediction/blob/main/ts_multi_var.ipynb)
 
 ## Binary Classification
-binary classification - [source](https://github.com/fas38/conformal-prediction/blob/main/binary_clf.ipynb)
+binary classification - [source](./tabular_classification_binary.ipynb)
 
 [slide](./documents/Binary%20Classification%20for%20Tabular%20Data.pptx)
